@@ -6,7 +6,7 @@ import shelve
 
 load_dotenv()
 
-st.title("Streamlit Chatbot Interface")
+st.title("Chatbot Interface Using Streamlit")
 
 USER_AVATAR = "👤"
 BOT_AVATAR = "🤖"
@@ -14,7 +14,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Ensure openai_model is initialized in session state
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
+    st.session_state["openai_model"] = "davinci-002"
 
 
 # Load chat history from shelve file
